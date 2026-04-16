@@ -50,8 +50,8 @@
     }
 
     &:hover {
-      background: #000 !important;
-      color: #fff !important;
+      background: var(--nav-hover-bg);
+      color: var(--nav-hover-color);
       border-color: #000 !important;
     }
   }
@@ -101,7 +101,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--play-bg);
+  color: var(--play-icon);
   border-radius: 50%;
   width: 30px;
   height: 50px;
@@ -122,6 +123,7 @@
     width: 25px;
     height: 25px;
     margin-left: 3px;
+    fill: var(--play-icon);
   }
 }
 

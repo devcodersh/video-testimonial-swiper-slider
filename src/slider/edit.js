@@ -16,10 +16,20 @@ const TEMPLATE = [
 ];
 
 export default function Edit({ attributes, setAttributes }) {
-  const { sectionTitle, accentColor } = attributes;
+  const { sectionTitle, accentColor, playIconColor,
+  playBgColor,
+  navHoverBg,
+  navHoverColor } = attributes;
 
   const blockProps = useBlockProps({
     className: "testimonial-section-editor",
+    style: {
+      "--accent": accentColor,
+      "--play-icon": playIconColor,
+      "--play-bg": playBgColor,
+      "--nav-hover-bg": navHoverBg,
+      "--nav-hover-color": navHoverColor
+    }
   });
 
   return (
@@ -33,6 +43,33 @@ export default function Edit({ attributes, setAttributes }) {
           <ColorPicker
             color={accentColor}
             onChange={(val) => setAttributes({ accentColor: val })}
+            enableAlpha={false}
+          />
+          <p><strong>Play Button Icon Color</strong></p>
+          <ColorPicker
+            color={playIconColor}
+            onChange={(val) => setAttributes({ playIconColor: val })}
+            enableAlpha={false}
+          />
+
+          <p><strong>Play Button Background</strong></p>
+          <ColorPicker
+            color={playBgColor}
+            onChange={(val) => setAttributes({ playBgColor: val })}
+            enableAlpha={false}
+          />
+
+          <p><strong>Nav Hover Background</strong></p>
+          <ColorPicker
+            color={navHoverBg}
+            onChange={(val) => setAttributes({ navHoverBg: val })}
+            enableAlpha={false}
+          />
+
+          <p><strong>Nav Hover Color</strong></p>
+          <ColorPicker
+            color={navHoverColor}
+            onChange={(val) => setAttributes({ navHoverColor: val })}
             enableAlpha={false}
           />
         </PanelBody>

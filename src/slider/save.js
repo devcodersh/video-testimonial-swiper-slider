@@ -5,7 +5,13 @@ export default function Save({ attributes }) {
 
   const blockProps = useBlockProps.save({
     className: "testimonial-section",
-    style: { "--accent": accentColor },
+    style: {
+      "--accent": accentColor,
+      "--play-icon": playIconColor,
+      "--play-bg": playBgColor,
+      "--nav-hover-bg": navHoverBg,
+      "--nav-hover-color": navHoverColor
+    }
   });
 
   return (
