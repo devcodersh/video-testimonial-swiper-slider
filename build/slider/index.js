@@ -24,6 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const ALLOWED_BLOCKS = ["create-block/video-testimonial-slide"];
 const TEMPLATE = [["create-block/video-testimonial-slide", {}], ["create-block/video-testimonial-slide", {}], ["create-block/video-testimonial-slide", {}]];
 function Edit({
@@ -50,64 +51,57 @@ function Edit({
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Settings", "video-testimonial-slider"),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Accent Color", "video-testimonial-slider")
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          style: {
-            fontSize: "12px",
-            color: "#666"
-          },
-          children: "Used for nav buttons and play icon."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
-          color: accentColor,
-          onChange: val => setAttributes({
-            accentColor: val
-          }),
-          enableAlpha: false
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-            children: "Play Button Icon Color"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
-          color: playIconColor,
-          onChange: val => setAttributes({
-            playIconColor: val
-          }),
-          enableAlpha: false
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-            children: "Play Button Background"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
-          color: playBgColor,
-          onChange: val => setAttributes({
-            playBgColor: val
-          }),
-          enableAlpha: false
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-            children: "Nav Hover Background"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
-          color: navHoverBg,
-          onChange: val => setAttributes({
-            navHoverBg: val
-          }),
-          enableAlpha: false
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
-            children: "Nav Hover Color"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
-          color: navHoverColor,
-          onChange: val => setAttributes({
-            navHoverColor: val
-          }),
-          enableAlpha: false
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
+          title: "Play Button Colors",
+          initialOpen: true,
+          colorSettings: [{
+            label: 'Background',
+            value: playBgColor,
+            onChange: value => setAttributes({
+              playBgColor: value
+            })
+          }, {
+            label: 'Icon',
+            value: playIconColor,
+            onChange: value => setAttributes({
+              playIconColor: value
+            })
+          }, {
+            label: 'Hover Background',
+            value: playHoverBg,
+            onChange: value => setAttributes({
+              playHoverBg: value
+            })
+          }, {
+            label: 'Hover Icon',
+            value: playHoverIcon,
+            onChange: value => setAttributes({
+              playHoverIcon: value
+            })
+          }]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
+          title: "Navigation Colors",
+          initialOpen: false,
+          colorSettings: [{
+            label: 'Accent',
+            value: accentColor,
+            onChange: value => setAttributes({
+              accentColor: value
+            })
+          }, {
+            label: 'Hover Background',
+            value: navHoverBg,
+            onChange: value => setAttributes({
+              navHoverBg: value
+            })
+          }, {
+            label: 'Hover Icon',
+            value: navHoverColor,
+            onChange: value => setAttributes({
+              navHoverColor: value
+            })
+          }]
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {

@@ -6,6 +6,7 @@ import {
   RichText,
 } from "@wordpress/block-editor";
 import { PanelBody, ColorPicker } from "@wordpress/components";
+import { PanelColorSettings } from '@wordpress/block-editor';
 
 const ALLOWED_BLOCKS = ["create-block/video-testimonial-slide"];
 
@@ -35,7 +36,7 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Settings", "video-testimonial-slider")}>
+        {/* <PanelBody title={__("Settings", "video-testimonial-slider")}>
           <p><strong>{__("Accent Color", "video-testimonial-slider")}</strong></p>
           <p style={{ fontSize: "12px", color: "#666" }}>
             Used for nav buttons and play icon.
@@ -72,7 +73,57 @@ export default function Edit({ attributes, setAttributes }) {
             onChange={(val) => setAttributes({ navHoverColor: val })}
             enableAlpha={false}
           />
-        </PanelBody>
+        </PanelBody> */}
+        <>
+          <PanelColorSettings
+            title="Play Button Colors"
+            initialOpen={true}
+            colorSettings={[
+              {
+                label: 'Background',
+                value: playBgColor,
+                onChange: (value) => setAttributes({ playBgColor: value })
+              },
+              {
+                label: 'Icon',
+                value: playIconColor,
+                onChange: (value) => setAttributes({ playIconColor: value })
+              },
+              {
+                label: 'Hover Background',
+                value: playHoverBg,
+                onChange: (value) => setAttributes({ playHoverBg: value })
+              },
+              {
+                label: 'Hover Icon',
+                value: playHoverIcon,
+                onChange: (value) => setAttributes({ playHoverIcon: value })
+              }
+            ]}
+          />
+
+          <PanelColorSettings
+            title="Navigation Colors"
+            initialOpen={false}
+            colorSettings={[
+              {
+                label: 'Accent',
+                value: accentColor,
+                onChange: (value) => setAttributes({ accentColor: value })
+              },
+              {
+                label: 'Hover Background',
+                value: navHoverBg,
+                onChange: (value) => setAttributes({ navHoverBg: value })
+              },
+              {
+                label: 'Hover Icon',
+                value: navHoverColor,
+                onChange: (value) => setAttributes({ navHoverColor: value })
+              }
+            ]}
+          />
+        </>
       </InspectorControls>
 
       <div {...blockProps}>
