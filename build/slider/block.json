@@ -22,6 +22,22 @@
     "accentColor": {
       "type": "string",
       "default": "#89AD29"
+    },
+    "playIconColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "playBgColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "navHoverBg": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "navHoverColor": {
+      "type": "string",
+      "default": "#ffffff"
     }
   },
   "editorScript": "file:./index.js",

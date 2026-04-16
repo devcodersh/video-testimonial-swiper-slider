@@ -32,10 +32,21 @@ function Edit({
 }) {
   const {
     sectionTitle,
-    accentColor
+    accentColor,
+    playIconColor,
+    playBgColor,
+    navHoverBg,
+    navHoverColor
   } = attributes;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-    className: "testimonial-section-editor"
+    className: "testimonial-section-editor",
+    style: {
+      "--accent": accentColor,
+      "--play-icon": playIconColor,
+      "--play-bg": playBgColor,
+      "--nav-hover-bg": navHoverBg,
+      "--nav-hover-color": navHoverColor
+    }
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
@@ -55,6 +66,46 @@ function Edit({
           color: accentColor,
           onChange: val => setAttributes({
             accentColor: val
+          }),
+          enableAlpha: false
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+            children: "Play Button Icon Color"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
+          color: playIconColor,
+          onChange: val => setAttributes({
+            playIconColor: val
+          }),
+          enableAlpha: false
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+            children: "Play Button Background"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
+          color: playBgColor,
+          onChange: val => setAttributes({
+            playBgColor: val
+          }),
+          enableAlpha: false
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+            children: "Nav Hover Background"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
+          color: navHoverBg,
+          onChange: val => setAttributes({
+            navHoverBg: val
+          }),
+          enableAlpha: false
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("strong", {
+            children: "Nav Hover Color"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
+          color: navHoverColor,
+          onChange: val => setAttributes({
+            navHoverColor: val
           }),
           enableAlpha: false
         })]
@@ -164,12 +215,20 @@ function Save({
 }) {
   const {
     sectionTitle,
-    accentColor
+    accentColor,
+    playIconColor,
+    playBgColor,
+    navHoverBg,
+    navHoverColor
   } = attributes;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
     className: "testimonial-section",
     style: {
-      "--accent": accentColor
+      "--accent": accentColor,
+      "--play-icon": playIconColor,
+      "--play-bg": playBgColor,
+      "--nav-hover-bg": navHoverBg,
+      "--nav-hover-color": navHoverColor
     }
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
@@ -267,7 +326,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/video-testimonial-slider","version":"1.0.0","title":"Video Testimonial Slider","category":"widgets","icon":"format-video","description":"A Swiper.js powered video testimonial slider.","supports":{"html":false,"align":["wide","full"]},"attributes":{"sectionTitle":{"type":"string","default":"Loved By Niche Digital Agencies Across The US!"},"accentColor":{"type":"string","default":"#89AD29"}},"editorScript":"file:./index.js","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/video-testimonial-slider","version":"1.0.0","title":"Video Testimonial Slider","category":"widgets","icon":"format-video","description":"A Swiper.js powered video testimonial slider.","supports":{"html":false,"align":["wide","full"]},"attributes":{"sectionTitle":{"type":"string","default":"Loved By Niche Digital Agencies Across The US!"},"accentColor":{"type":"string","default":"#89AD29"},"playIconColor":{"type":"string","default":"#ffffff"},"playBgColor":{"type":"string","default":"#000000"},"navHoverBg":{"type":"string","default":"#000000"},"navHoverColor":{"type":"string","default":"#ffffff"}},"editorScript":"file:./index.js","style":"file:./style-index.css"}');
 
 /***/ }
 
