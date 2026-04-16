@@ -7,6 +7,7 @@
   padding: 0 20px;
   position: relative;
   --accent: #89AD29;
+  font-family: var(--heading-font);
 }
 
 .testimonial-header {
@@ -154,6 +155,7 @@
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  font-family: var(--content-font);
 }
 
 .card-content .stars {
@@ -168,6 +170,7 @@
   color: #ccc;
   margin: 0;
   line-height: 1.4;
+  font-family: var(--content-font);
 }
 
 .slides-editor-wrapper {

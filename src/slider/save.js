@@ -1,7 +1,7 @@
 import { useBlockProps, InnerBlocks, RichText } from "@wordpress/block-editor";
 
 export default function Save({ attributes }) {
-  const { sectionTitle, accentColor, playIconColor, playBgColor, navHoverBg, navHoverColor  } = attributes;
+  const { sectionTitle, accentColor, playIconColor, playBgColor, navHoverBg, navHoverColor, headingFontFamily, contentFontFamily } = attributes;
 
   const blockProps = useBlockProps.save({
     className: "testimonial-section",
@@ -10,7 +10,9 @@ export default function Save({ attributes }) {
       "--play-icon": playIconColor,
       "--play-bg": playBgColor,
       "--nav-hover-bg": navHoverBg,
-      "--nav-hover-color": navHoverColor
+      "--nav-hover-color": navHoverColor,
+      "--heading-font": headingFontFamily,
+      "--content-font": contentFontFamily
     }
   });
 

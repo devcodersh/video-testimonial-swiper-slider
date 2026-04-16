@@ -49,3 +49,13 @@ function video_testimonial_slider_frontend_assets() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'video_testimonial_slider_frontend_assets' );
+
+function enqueue_testimonial_fonts() {
+    wp_enqueue_style(
+        'testimonial-fonts',
+        'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&family=Playfair+Display:wght@400;600&display=swap',
+        array(),
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_testimonial_fonts');

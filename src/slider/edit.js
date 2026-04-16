@@ -7,6 +7,7 @@ import {
 } from "@wordpress/block-editor";
 // import { PanelBody, ColorPicker } from "@wordpress/components";
 import { PanelColorSettings } from '@wordpress/block-editor';
+import { SelectControl } from '@wordpress/components';
 
 const ALLOWED_BLOCKS = ["create-block/video-testimonial-slide"];
 
@@ -20,7 +21,8 @@ export default function Edit({ attributes, setAttributes }) {
   const { sectionTitle, accentColor, playIconColor,
   playBgColor,
   navHoverBg,
-  navHoverColor } = attributes;
+  navHoverColor,headingFontFamily,
+  contentFontFamily } = attributes;
 
   const blockProps = useBlockProps({
     className: "testimonial-section-editor",
@@ -29,7 +31,9 @@ export default function Edit({ attributes, setAttributes }) {
       "--play-icon": playIconColor,
       "--play-bg": playBgColor,
       "--nav-hover-bg": navHoverBg,
-      "--nav-hover-color": navHoverColor
+      "--nav-hover-color": navHoverColor,
+      "--heading-font": headingFontFamily,
+      "--content-font": contentFontFamily,
     }
   });
 
@@ -113,6 +117,36 @@ export default function Edit({ attributes, setAttributes }) {
               }
             ]}
           />
+
+          <PanelBody title="Typography" initialOpen={false}>
+
+            <SelectControl
+              label="Heading Font"
+              value={headingFontFamily}
+              options={[
+                { label: 'Default', value: 'inherit' },
+                { label: 'Poppins', value: 'Poppins, sans-serif' },
+                { label: 'Inter', value: 'Inter, sans-serif' },
+                { label: 'Roboto', value: 'Roboto, sans-serif' },
+                { label: 'Playfair Display', value: 'Playfair Display, serif' }
+              ]}
+              onChange={(value) => setAttributes({ headingFontFamily: value })}
+            />
+
+            <SelectControl
+              label="Content Font"
+              value={contentFontFamily}
+              options={[
+                { label: 'Default', value: 'inherit' },
+                { label: 'Poppins', value: 'Poppins, sans-serif' },
+                { label: 'Inter', value: 'Inter, sans-serif' },
+                { label: 'Roboto', value: 'Roboto, sans-serif' },
+                { label: 'Open Sans', value: 'Open Sans, sans-serif' }
+              ]}
+              onChange={(value) => setAttributes({ contentFontFamily: value })}
+            />
+
+          </PanelBody>
         </>
       </InspectorControls>
 

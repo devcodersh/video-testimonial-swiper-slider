@@ -38,6 +38,14 @@
     "navHoverColor": {
       "type": "string",
       "default": "#ffffff"
+    },
+    "headingFontFamily": {
+      "type": "string",
+      "default": "inherit"
+    },
+    "contentFontFamily": {
+      "type": "string",
+      "default": "inherit"
     }
   },
   "editorScript": "file:./index.js",
