@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/video-testimonial-slider",
+  "version": "1.0.0",
+  "title": "Video Testimonial Slider",
+  "category": "widgets",
+  "icon": "format-video",
+  "description": "A Swiper.js powered video testimonial slider.",
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "Loved By Niche Digital Agencies Across The US!"
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#89AD29"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}

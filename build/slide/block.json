@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/video-testimonial-slide",
+  "version": "1.0.0",
+  "title": "Video Testimonial Slide",
+  "category": "widgets",
+  "icon": "video-alt3",
+  "description": "A single video testimonial slide.",
+  "parent": [
+    "create-block/video-testimonial-slider"
+  ],
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "videoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "authorName": {
+      "type": "string",
+      "default": ""
+    },
+    "authorRole": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "rating": {
+      "type": "number",
+      "default": 5
+    },
+    "accentColor": {
+      "type": "string",
+      "default": "#89AD29"
+    }
+  },
+  "editorScript": "file:./index.js"
+}
