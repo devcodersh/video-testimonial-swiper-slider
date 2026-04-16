@@ -5,7 +5,7 @@ import {
   InspectorControls,
   RichText,
 } from "@wordpress/block-editor";
-import { PanelBody, ColorPicker } from "@wordpress/components";
+// import { PanelBody, ColorPicker } from "@wordpress/components";
 import { PanelColorSettings } from '@wordpress/block-editor';
 
 const ALLOWED_BLOCKS = ["create-block/video-testimonial-slide"];
@@ -88,16 +88,6 @@ export default function Edit({ attributes, setAttributes }) {
                 label: 'Icon',
                 value: playIconColor,
                 onChange: (value) => setAttributes({ playIconColor: value })
-              },
-              {
-                label: 'Hover Background',
-                value: playHoverBg,
-                onChange: (value) => setAttributes({ playHoverBg: value })
-              },
-              {
-                label: 'Hover Icon',
-                value: playHoverIcon,
-                onChange: (value) => setAttributes({ playHoverIcon: value })
               }
             ]}
           />
