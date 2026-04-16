@@ -40,8 +40,8 @@
   width: 40px !important;
   height: 40px !important;
   border-radius: 50%;
-  border: 2px solid var(--accent) !important;
-  color: var(--accent) !important;
+  border: 2px solid var(--accent);
+  color: var(--accent);
   margin: 0 !important;
   display: flex !important;
   align-items: center;
@@ -59,7 +59,7 @@
 .nav-btns .swiper-button-prev:hover {
   background: var(--nav-hover-bg);
   color: var(--nav-hover-color);
-  border-color: #000 !important;
+  border-color: var(--nav-hover-bg);
 }
 
 .nav-preview-btn {
